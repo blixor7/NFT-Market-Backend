@@ -1,43 +1,87 @@
-<<<<<<< HEAD
-# NFT-MarketPlace-BackEnd
-This is a demo implementation for openSea MarketPlace(Backend Part)
-=======
-# marketplace-api
+# Marketplace API Backend
 
-This repository contains api to retrieve marketplace data for matic network marketplace
+A backend service for retrieving marketplace data from the Matic network blockchain.
 
-## setup
+## Overview
 
-#### Installation
+This repository provides API endpoints to access marketplace data specifically designed for the Matic Network (Polygon) blockchain. It serves as a demo implementation inspired by OpenSea's marketplace functionality.
 
-```sh
-$ git clone https://github.com/maticnetwork/marketplace-api
-$ cd marketplace-api
-$ nvm use
-$ npm install
+## Prerequisites
 
-# setup and start PostgreSQL
-# follow prisma/README.md for database client setup
+- Node.js (version specified in .nvmrc)
+- PostgreSQL database
+- Git
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/maticnetwork/marketplace-api
+cd marketplace-api
 ```
 
-## Configure environment
-
-You need to configure your environment variables now. Copy `.env.example` and rename as `.env`. Now provide values for the keys mentioned there.
-
-#### Development
-
-```sh
-# apply migrations
-$ npm run migrate-up
-
-# start the development server with hot reload
-$ npm run dev
-
-# create migration for database schema changes
-$ npm run migrate-save
+2. Use the correct Node.js version:
+```bash
+nvm use
 ```
 
-#### database
+3. Install dependencies:
+```bash
+npm install
+```
 
-Refer to [readme.md](./prisma/README.md)
->>>>>>> origin/ERC1155
+4. Set up PostgreSQL database
+
+5. Configure Prisma database client (refer to prisma/README.md)
+
+## Environment Configuration
+
+1. Copy the environment template:
+```bash
+cp .env.example .env
+```
+
+2. Update the `.env` file with your specific configuration values:
+   - Database connection string
+   - Network configuration
+   - API keys and secrets
+
+## Development
+
+Apply database migrations:
+```bash
+npm run migrate-up
+```
+
+Start development server with hot reload:
+```bash
+npm run dev
+```
+
+Create new database migrations when schema changes occur:
+```bash
+npm run migrate-save
+```
+
+## Database Setup
+
+Refer to the separate database documentation for detailed setup instructions and schema information.
+
+## Features
+
+- RESTful API endpoints for marketplace data
+- Matic Network/Polygon blockchain integration
+- Database migrations with Prisma
+- PostgreSQL database support
+- Hot reload development environment
+
+## Technical Stack
+
+- Node.js runtime
+- PostgreSQL database
+- Prisma ORM
+- Matic Network/Polygon blockchain integration
+
+## Support
+
+For additional support regarding database setup or API configuration, refer to the respective documentation files included in the repository.
